@@ -1,26 +1,26 @@
 # 登录
 
 > 登录 ChatMind AI 官网
-> `/user/login` `POST`
+> `/user/login` `POST` `200 OK`
 
 ## POST 请求参数
 
-|   key    |    value    |  type  |        |
+|   Key    |    Value    |  Type  |        |
 | :------: | :---------: | :----: | :----: |
 | phonenum | 手机号/邮箱 | string | `必须` |
 | password |    密码     | string | `必须` |
 
 ## 返回内容
 
-|  key   |             value              |  type  |
+|  Key   |             Value              |  Type  |
 | :----: | :----------------------------: | :----: |
 |  code  |             响应码             |  int   |
 | reason |            返回消息            | string |
-|  data  | 返回数据 （[查看详情](#data)） |  JSON  |
+|  data  | 返回数据 ([查看详情](#data)) |  JSON  |
 
-### data
+### `data`
 
-|       key       |                    value                    |  type  |
+|       Key       |                    Value                    |  Type  |
 | :-------------: | :-----------------------------------------: | :----: |
 |    phonenum     |                   手机号                    | string |
 |    username     |                    昵称                     | string |
@@ -31,37 +31,37 @@
 | checkDaysCount  |                   `未知`                    |  int   |
 |   checkStatus   |                   `未知`                    |  bool  |
 | lastUseModelsId |               上次使用角色 id               |  str   |
-|    viplevel     |      VIP 等级（[查看详情](#viplevel)）      |  str   |
+|    viplevel     |      VIP 等级([查看详情](#viplevel))      |  str   |
 |   vipleftday    |                剩余 vip 天数                |  int   |
 |     isread      |                   `未知`                    |  int   |
-|   inBagModels   | 上一次聊天模型 （[查看详情](#inbagmodels)） |  JSON  |
-|    ttsConfig    |  tts 语音设置 （[查看详情](#ttsconfig) ）   |  JSON  |
+|   inBagModels   | 上一次聊天模型 ([查看详情](#inbagmodels)) |  JSON  |
+|    ttsConfig    |  tts 语音设置 ([查看详情](#ttsconfig) )   |  JSON  |
 
-#### viplevel
+#### `viplevel`
 
 每个数字对应会员等级
 
-| platform | value  |
+| platform | Value  |
 | :------: | :----: |
 | 普通会员 | `未知` |
 | 爱心会员 |   3    |
 | 高级会员 | `未知` |
 | 至臻会员 | `未知` |
 
-#### inBagModels
+#### `inBagModels`
 
-|    key    |                 value                  |  type  |
+|    Key    |                 Value                  |  Type  |
 | :-------: | :------------------------------------: | :----: |
 |  roleId   |                角色 id                 | string |
 |  avatar   |                角色头像                | string |
 |   name    |                角色名称                | string |
-| modelName | 使用模型名称（[查看详情](#modelname)） | string |
+| modelName | 使用模型名称([查看详情](#modelname)) | string |
 
-##### modelName
+##### `modelName`
 
 模型详情见`profile`
 
-|    platform    |       value       |
+|    platform    |       Value       |
 | :------------: | :---------------: |
 |  MindGen 3.5   | gpt-3.5-turbo-16k |
 |  MindGen 4.0   |      `未知`       |
@@ -79,9 +79,9 @@
 
 > 其余待补充
 
-#### ttsConfig
+#### `ttsConfig`
 
-|   key    |  value   |  type  |
+|   Key    |  Value   |  Type  |
 | :------: | :------: | :----: |
 | language | 语音语言 | string |
 |  voice   | 语音角色 | string |
